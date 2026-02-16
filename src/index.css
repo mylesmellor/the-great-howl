@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* =========================================
+   THE GREAT HOWL — Theme
+   ========================================= */
+
+@theme {
+  --color-charcoal-void: #1C1C1A;
+  --color-weathered-wood: #3A3226;
+  --color-dust-bone: #8B7E6A;
+  --color-faded-moss: #4A5D54;
+  --color-parchment-whisper: #D4C5B0;
+  --color-rust: #A2633B;
+  --color-shadow-grey: #5C5449;
+  --color-pale-cream: #E8DCC8;
+
+  --font-heading: 'Crimson Text', 'Georgia', serif;
+  --font-body: 'Work Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* =========================================
+   BASE
+   ========================================= */
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-charcoal-void);
+  color: var(--color-pale-cream);
+  overflow-x: hidden;
+}
+
+/* =========================================
+   GRAIN CANVAS (rendered by GrainOverlay)
+   ========================================= */
+#grain-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  image-rendering: pixelated;
+}
+
+/* =========================================
+   LINKS
+   ========================================= */
+a {
+  color: var(--color-faded-moss);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-rust);
+  border-bottom-color: var(--color-rust);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   SCROLL FADE-IN
+   ========================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,14 @@
+{
+  "name": "the-great-howl",
+  "description": "Creative web project — The Great Howl",
+  "status": "active",
+  "completionLevel": 35,
+  "priority": "medium",
+  "lastWorkedOn": "2026-01-25",
+  "learningValue": "high",
+  "goals": ["Build an interactive creative experience", "Experiment with animations"],
+  "nextSteps": ["Add sound design", "Build intro sequence"],
+  "deploymentUrl": "",
+  "githubUrl": "",
+  "tags": ["web", "creative", "animation"]
+}
