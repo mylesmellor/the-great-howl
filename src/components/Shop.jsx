@@ -101,7 +101,7 @@ export default function Shop() {
   return (
     <section
       id="shop"
-      className="relative py-[120px] sm:py-[160px]"
+      className="relative py-20 sm:py-24"
       style={{ backgroundColor: '#1C1C1A' }}
     >
       {/* Atmospheric gradient */}
@@ -117,7 +117,7 @@ export default function Shop() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-12">
         {/* Hero / Intro */}
-        <div ref={ref} className="mb-20 sm:mb-28 max-w-[600px]">
+        <div ref={ref} className="mb-12 sm:mb-16 max-w-[600px]">
           <Editable
             as="h2"
             storageKey="shop-heading"
@@ -157,9 +157,9 @@ export default function Shop() {
         </div>
 
         {/* About the merch */}
-        <div className="mt-24 sm:mt-32 max-w-[500px]">
+        <div className="mt-16 sm:mt-20 max-w-[500px]">
           <div
-            className="h-px w-[30%] max-w-[120px] mb-12"
+            className="h-px w-[30%] max-w-[120px] mb-8"
             style={{
               background: 'linear-gradient(90deg, #5C5449, transparent)',
               opacity: 0.3,
@@ -190,7 +190,7 @@ export default function Shop() {
         </div>
 
         {/* Shipping & Returns */}
-        <div className="mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-[700px]">
+        <div className="mt-12 sm:mt-14 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-[700px]">
           <div>
             <h4 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-4">
               Shipping

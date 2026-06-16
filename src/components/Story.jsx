@@ -8,7 +8,7 @@ export default function Story() {
   return (
     <section
       id="story"
-      className="relative py-[140px] sm:py-[160px]"
+      className="relative py-20 sm:py-24"
       style={{ backgroundColor: '#3A3226' }}
     >
       {/* Warm texture overlay */}

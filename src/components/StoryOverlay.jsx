@@ -23,6 +23,14 @@ export default function StoryOverlay({ storyId, onClose }) {
 
   if (!story) return null
 
+  // Deckle / torn-page edge — subtle jitter so the box reads as paper, not a dialog
+  const tornPage = `polygon(
+    0.6% 0.5%, 12% 0%, 28% 0.8%, 45% 0.2%, 62% 0.9%, 80% 0.1%, 99% 0.6%,
+    99.4% 14%, 98.8% 30%, 99.6% 46%, 98.9% 62%, 99.5% 78%, 99% 92%,
+    99.4% 99.5%, 82% 99%, 64% 99.7%, 46% 99.1%, 28% 99.8%, 12% 99.2%, 0.6% 99.5%,
+    0.4% 84%, 1% 68%, 0.3% 52%, 0.9% 36%, 0.4% 20%, 0.8% 6%
+  )`
+
   return (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center"
@@ -39,15 +47,27 @@ export default function StoryOverlay({ storyId, onClose }) {
 
       {/* Content */}
       <div
-        className="relative z-10 max-w-[520px] w-full mx-6 max-h-[85vh] overflow-y-auto"
+        className="relative z-10 max-w-[460px] w-full mx-6"
         onClick={(e) => e.stopPropagation()}
+        style={{ transform: 'rotate(-0.8deg)' }}
       >
-        {/* Paper background */}
+        {/* Drop shadow beneath the page — sits like a note on the surface */}
         <div
-          className="relative px-8 sm:px-12 py-10 sm:py-14"
+          className="absolute inset-0 -z-10"
+          style={{
+            transform: 'translate(4px, 6px)',
+            backgroundColor: 'rgba(10,8,5,0.5)',
+            filter: 'blur(10px)',
+            clipPath: tornPage,
+          }}
+        />
+
+        {/* Paper background — torn page */}
+        <div
+          className="relative px-8 sm:px-12 pt-10 sm:pt-12 pb-8 sm:pb-9 overflow-y-auto max-h-[85vh]"
           style={{
             backgroundColor: '#332C22',
-            boxShadow: '0 25px 60px rgba(0,0,0,0.5), 0 0 1px rgba(139,126,106,0.15)',
+            clipPath: tornPage,
           }}
         >
           {/* Mottled paper texture */}

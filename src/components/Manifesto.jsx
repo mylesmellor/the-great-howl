@@ -7,7 +7,7 @@ export default function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="relative py-[160px] sm:py-[180px] text-center"
+      className="relative py-24 sm:py-28 text-center"
       style={{ backgroundColor: '#3A3226' }}
     >
       {/* Background image — dirt road */}
@@ -34,7 +34,7 @@ export default function Manifesto() {
 
       <div
         ref={ref}
-        className="relative z-10 max-w-[900px] mx-auto px-6 sm:px-12 py-20 border-t border-b"
+        className="relative z-10 max-w-[900px] mx-auto px-6 sm:px-12 py-14 border-t border-b"
         style={{ borderColor: 'rgba(92,84,73,0.3)' }}
       >
         {/* Corner marks */}

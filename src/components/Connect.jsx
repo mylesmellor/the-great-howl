@@ -11,7 +11,7 @@ export default function Connect() {
   return (
     <section
       id="connect"
-      className="relative py-[120px] sm:py-[140px]"
+      className="relative py-20 sm:py-24"
       style={{ backgroundColor: '#1C1C1A' }}
     >
       {/* Atmospheric layer */}

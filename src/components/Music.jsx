@@ -12,14 +12,6 @@ const TRACKS = [
   },
 ]
 
-const PLATFORMS = [
-  { name: 'Spotify', href: '#' },
-  { name: 'Apple Music', href: '#' },
-  { name: 'Bandcamp', href: '#' },
-  { name: 'YouTube Music', href: '#' },
-  { name: 'Amazon Music', href: '#' },
-]
-
 function TrackEmbed({ title, sunoId }) {
   return (
     <div
@@ -58,7 +50,7 @@ export default function Music({ onOpenStory }) {
   return (
     <section
       id="listen"
-      className="relative py-[140px] sm:py-[160px]"
+      className="relative py-20 sm:py-24"
       style={{ backgroundColor: '#1C1C1A' }}
     >
       {/* Atmospheric gradient */}
@@ -73,51 +65,20 @@ export default function Music({ onOpenStory }) {
       />
 
       <div ref={ref} className="relative z-10 max-w-[1200px] mx-auto px-6 sm:px-12">
-        <h2 className="font-heading font-semibold text-parchment-whisper uppercase tracking-[0.1em] mb-14 text-xl sm:text-2xl text-right pr-[5%]">
-          Listen
-        </h2>
+        {/* Heading + marginal fragment on one line */}
+        <div className="flex flex-wrap items-center justify-between gap-x-8 gap-y-6 mb-8">
+          <h2 className="font-heading font-semibold text-parchment-whisper uppercase tracking-[0.1em] text-xl sm:text-2xl">
+            Listen
+          </h2>
+          <AnecdoteFragment id="chord_1" inline onOpenStory={onOpenStory} />
+        </div>
 
         {/* Tracks */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {TRACKS.map((track) => (
             <TrackEmbed key={track.sunoId} {...track} />
           ))}
         </div>
-
-        {/* Marginal fragment — chord */}
-        <div className="mb-14 flex justify-end pr-[5%]">
-          <AnecdoteFragment id="chord_1" onOpenStory={onOpenStory} />
-        </div>
-
-        {/* Divider */}
-        <div
-          className="w-[30%] max-w-[200px] h-px mb-12"
-          style={{
-            background: 'linear-gradient(90deg, #5C5449, transparent)',
-            opacity: 0.3,
-          }}
-        />
-
-        {/* Streaming links */}
-        <nav aria-label="Streaming platforms">
-          <h3 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-6">
-            Find the music
-          </h3>
-          <ul className="space-y-4">
-            {PLATFORMS.map((p) => (
-              <li key={p.name}>
-                <a
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block font-body font-normal text-[1.02rem] tracking-wide text-dust-bone hover:text-rust pl-0 hover:pl-1.5 transition-all duration-300"
-                >
-                  {p.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </div>
     </section>
   )

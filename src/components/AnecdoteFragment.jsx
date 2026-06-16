@@ -8,7 +8,7 @@ const VARIATIONS = {
   kitchen_4: { rotate: 1.6, offsetX: '10%', align: 'left', stainX: '55%', stainY: '35%', tearSide: 'bottom', creaseAngle: -25 },
 }
 
-export default function AnecdoteFragment({ id, quiet = false, onOpenStory }) {
+export default function AnecdoteFragment({ id, quiet = false, inline = false, onOpenStory }) {
   const anecdote = getAnecdote(id)
   if (!anecdote) return null
 
@@ -48,7 +48,7 @@ export default function AnecdoteFragment({ id, quiet = false, onOpenStory }) {
       className="relative inline-block cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
       style={{
         transform: `rotate(${v.rotate}deg)`,
-        marginLeft: v.offsetX,
+        marginLeft: inline ? 0 : v.offsetX,
         maxWidth: 340,
       }}
       onClick={handleClick}
