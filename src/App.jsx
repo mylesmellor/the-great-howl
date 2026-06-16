@@ -7,6 +7,7 @@ import Nav from './components/Nav'
 import Cart from './components/Cart'
 import Hero from './components/Hero'
 import Story from './components/Story'
+import Film from './components/Film'
 import Music from './components/Music'
 import Shop from './components/Shop'
 import Manifesto from './components/Manifesto'
@@ -34,6 +35,8 @@ export default function App() {
           <div className="px-6 sm:px-12 py-12 sm:py-16 max-w-[1200px] mx-auto">
             <AnecdoteFragment id="drawer_4" onOpenStory={openStory} />
           </div>
+
+          <Film />
 
           <Music onOpenStory={openStory} />
           <Shop />
