@@ -60,7 +60,7 @@ export default function Hero() {
           src="/images/rope-logo.png"
           alt=""
           aria-hidden="true"
-          className="w-[140px] sm:w-[200px] lg:w-[260px] opacity-[0.12] rotate-[6deg]"
+          className="w-[140px] sm:w-[200px] lg:w-[260px] opacity-[0.16] rotate-[6deg]"
           style={{
             filter: 'grayscale(40%) brightness(0.7) sepia(15%)',
             mixBlendMode: 'screen',

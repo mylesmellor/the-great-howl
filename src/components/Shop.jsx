@@ -143,7 +143,7 @@ export default function Shop() {
           <Editable
             as="p"
             storageKey="shop-intro-3"
-            className="font-body font-light text-shadow-grey text-xs sm:text-sm leading-[1.8]"
+            className="font-body font-light text-dust-bone text-xs sm:text-sm leading-[1.8]"
           >
             A portion of proceeds supports organizations helping people find courage to create.
           </Editable>
@@ -169,7 +169,7 @@ export default function Shop() {
           <Editable
             as="h3"
             storageKey="shop-about-heading"
-            className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-5 opacity-70"
+            className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-5"
           >
             Made Carefully
           </Editable>
@@ -192,20 +192,20 @@ export default function Shop() {
         {/* Shipping & Returns */}
         <div className="mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-[700px]">
           <div>
-            <h4 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-4 opacity-70">
+            <h4 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-4">
               Shipping
             </h4>
-            <p className="font-body font-light text-shadow-grey text-xs leading-[1.8]">
+            <p className="font-body font-light text-dust-bone text-xs leading-[1.8]">
               Domestic: 5–10 business days<br />
               International: 10–20 business days<br />
               Tracking provided. Imperfect packaging is intentional.
             </p>
           </div>
           <div>
-            <h4 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-4 opacity-70">
+            <h4 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-4">
               Returns
             </h4>
-            <p className="font-body font-light text-shadow-grey text-xs leading-[1.8]">
+            <p className="font-body font-light text-dust-bone text-xs leading-[1.8]">
               If something arrives damaged, let us know. We'll make it right.<br />
               Otherwise, all sales final. These are limited runs.
             </p>

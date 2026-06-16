@@ -45,7 +45,7 @@ function TrackEmbed({ title, sunoId }) {
         loading="lazy"
         style={{
           border: 'none',
-          filter: 'grayscale(30%) sepia(10%) brightness(0.85)',
+          filter: 'grayscale(55%) sepia(35%) saturate(0.7) brightness(0.82) contrast(1.04)',
         }}
       />
     </div>
@@ -100,7 +100,7 @@ export default function Music({ onOpenStory }) {
 
         {/* Streaming links */}
         <nav aria-label="Streaming platforms">
-          <h3 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-6 opacity-70">
+          <h3 className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-6">
             Find the music
           </h3>
           <ul className="space-y-4">
@@ -110,7 +110,7 @@ export default function Music({ onOpenStory }) {
                   href={p.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body font-normal text-[1.02rem] tracking-wide"
+                  className="inline-block font-body font-normal text-[1.02rem] tracking-wide text-dust-bone hover:text-rust pl-0 hover:pl-1.5 transition-all duration-300"
                 >
                   {p.name}
                 </a>

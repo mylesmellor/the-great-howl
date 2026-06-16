@@ -57,23 +57,27 @@ body {
 
 /* =========================================
    LINKS
+   — kept in @layer base so Tailwind colour utilities
+     (e.g. text-dust-bone on nav / streaming links) win
    ========================================= */
-a {
-  color: var(--color-faded-moss);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
+@layer base {
+  a {
+    color: var(--color-faded-moss);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
 
-a:hover,
-a:focus-visible {
-  color: var(--color-rust);
-  border-bottom-color: var(--color-rust);
-}
+  a:hover,
+  a:focus-visible {
+    color: var(--color-rust);
+    border-bottom-color: var(--color-rust);
+  }
 
-a:focus-visible {
-  outline: 2px solid var(--color-rust);
-  outline-offset: 3px;
+  a:focus-visible {
+    outline: 2px solid var(--color-rust);
+    outline-offset: 3px;
+  }
 }
 
 /* =========================================

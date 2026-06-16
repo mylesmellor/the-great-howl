@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Operator-workspace local instructions (kept out of the public repo)
+CLAUDE.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

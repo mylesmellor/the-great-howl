@@ -3,7 +3,6 @@ import useFadeIn from './useFadeIn'
 const SOCIAL = [
   { name: 'Facebook', href: '#', icon: '/images/icon-facebook.png' },
   { name: 'Instagram', href: '#', icon: '/images/icon-instagram.png' },
-  { name: 'LinkedIn', href: '#', icon: '/images/icon-linkedin.png' },
 ]
 
 export default function Connect() {
@@ -54,7 +53,7 @@ export default function Connect() {
 
           {/* Email signup */}
           <div className="max-w-[340px]">
-            <p className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-5 opacity-70">
+            <p className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-5">
               Stay connected
             </p>
             <form
@@ -86,7 +85,7 @@ export default function Connect() {
 
           {/* Contact form */}
           <div className="max-w-[380px] w-full">
-            <p className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-5 opacity-70">
+            <p className="font-body font-normal text-dust-bone text-xs tracking-[0.1em] uppercase mb-5">
               Say something
             </p>
             <form
