@@ -60,6 +60,7 @@ export function CartProvider({ children }) {
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components -- hook co-located with its provider by design
 export function useCart() {
   return useContext(CartContext)
 }

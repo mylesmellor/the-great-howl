@@ -11,6 +11,7 @@ import { useEdit } from './EditContext'
  *   </Editable>
  */
 export default function Editable({
+  // eslint-disable-next-line no-unused-vars -- rendered as a dynamic JSX element (<Tag> below); flat config has no eslint-plugin-react to track JSX usage
   as: Tag = 'span',
   storageKey,
   children,
